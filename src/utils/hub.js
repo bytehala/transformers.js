@@ -194,7 +194,7 @@ export async function getFile(urlOrPath) {
             // If an access token is present in the environment variables,
             // we add it to the request headers.
             // NOTE: We keep `HF_ACCESS_TOKEN` for backwards compatibility (as a fallback).
-            const token = process.env?.HF_TOKEN ?? process.env?.HF_ACCESS_TOKEN;
+            const token = env['remoteHostToken'] ?? process.env?.HF_TOKEN ?? process.env?.HF_ACCESS_TOKEN;
             if (token) {
                 headers.set('Authorization', `Bearer ${token}`);
             }

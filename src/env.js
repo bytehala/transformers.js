@@ -101,6 +101,7 @@ export const env = {
     allowRemoteModels: true,
     remoteHost: 'https://huggingface.co/',
     remotePathTemplate: '{model}/resolve/{revision}/',
+    remoteHostToken: null,
 
     allowLocalModels: true,
     localModelPath: localModelPath,
